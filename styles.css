@@ -6,10 +6,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #950404d1;
 }
 
 header {
-    background: #333;
+    background: #a1662f;
     color: #fff;
     padding: 1rem 0;
 }
@@ -37,7 +38,7 @@ nav ul li a {
 }
 
 footer {
-    background: #340268a2;
+    background: #a1662f;
     color: #ffffff;
     text-align: center;
     padding: 0.1rem 0;
