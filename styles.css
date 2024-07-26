@@ -43,6 +43,14 @@ footer {
     padding: 0.1rem 0;
 }
 
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
     width: 200px;
     height: 300px;
