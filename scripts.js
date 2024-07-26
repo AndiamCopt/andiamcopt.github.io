@@ -1,3 +1,10 @@
+
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
+
 // Firebase App and Authentication are already initialized in the HTML file
 
 // Reference to the form elements
