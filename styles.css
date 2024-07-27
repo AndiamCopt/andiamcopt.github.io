@@ -6,12 +6,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #fff;
+    background-color: #aaaaaa;
 }
 
 header {
     background: #084101;
-    color: #fff;
+    color: #aaaaaa;
     padding: 1rem 0;
 }
 
@@ -39,7 +39,7 @@ nav ul li a {
 
 footer {
     background: #084101;
-    color: #ffffff;
+    color: #aaaaaa;
     text-align: center;
     padding: 0.1rem 0;
 }
