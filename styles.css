@@ -6,12 +6,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #dbdbdb;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #1000bf;
-    color: #dbdbdb;
+    background: #0073e6;
+    color: #fff;
     padding: 1rem 0;
 }
 
@@ -29,19 +30,83 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57; /* Highlight color on hover */
 }
 
 .section {
     flex: 1; /* Ensures that sections take up remaining space */
     padding: 2rem;
     text-align: center;
+    background-color: #fff; /* White background for sections */
+    margin: 1rem;
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+}
+
+h1, h2 {
+    color: #0073e6; /* Dark blue color for headings */
+}
+
+input[type="email"], input[type="password"] {
+    width: calc(100% - 2rem);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 footer {
-    background: #1000bf;
-    color: #dbdbdb;
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 0.1rem 0;
+    padding: 0.5rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+input[type="email"], input[type="password"] {
+    width: calc(100% - 2rem);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .cards-container {

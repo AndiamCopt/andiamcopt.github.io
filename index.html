@@ -24,69 +24,76 @@
         </nav>
     </header>
 
-    <section id="home" class="section">
-        <h1>Cavo - (Write Cavo in coptic)</h1>
-        <p>Coptic Learning Website</p>
-    </section>
+    </main>
+        <section id="home" class="section">
+            <h1>Cavo - (Write Cavo in coptic)</h1>
+            <p>Coptic Learning Website</p>
+        </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>[Write a brief introduction about yourself]</p>
-    </section>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>[Write a brief introduction about yourself]</p>
+        </section>
 
-    <div class="cards-container">
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Ⲁ</div>
-                <div class="card-back">Alpha</div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Ⲁ</div>
+                    <div class="card-back">Alpha</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Ⲃ</div>
+                    <div class="card-back">Beta</div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">Ⲃ</div>
-                <div class="card-back">Beta</div>
-            </div>
-        </div>
-    </div>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/your-username/project-1">Project 1</a></li>
-            <li><a href="https://github.com/your-username/project-2">Project 2</a></li>
-            <li><a href="https://github.com/your-username/project-3">Project 3</a></li>
-        </ul>
-    </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/your-username/project-1">Project 1</a></li>
+                <li><a href="https://github.com/your-username/project-2">Project 2</a></li>
+                <li><a href="https://github.com/your-username/project-3">Project 3</a></li>
+            </ul>
+        </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        </section>
 
-    <section id="login" class="section">
-        <h2>Login</h2>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </section>
+        <section id="login" class="section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
 
-    <section id="signup" class="section">
-        <h2>Sign Up</h2>
-        <form id="signup-form">
-            <input type="email" id="signup-email" placeholder="Email" required>
-            <input type="password" id="signup-password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-    </section>
-    
+        <section id="signup" class="section">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2024 Joseph Abdelmalek. All rights reserved.</p>
     </footer>
 
     <script>
         // Your web app's Firebase configuration
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
         var firebaseConfig = {
             apiKey: "AIzaSyCZB4pacDeotyh8mqGvxd0y3hqLgG83QjM",
             authDomain: "cavo-6df67.firebaseapp.com",
