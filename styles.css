@@ -14,6 +14,32 @@ header {
     background: #0073e6;
     color: #fff;
     padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffdd57; /* Highlight color on hover */
 }
 
 nav ul {
@@ -70,10 +96,10 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 0.5rem 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    padding: 1rem 0; /* Increased padding for more space */
+    border-top: 4px solid #0073e6; /* Top border for emphasis */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 0.9rem;
 }
 
 button {
