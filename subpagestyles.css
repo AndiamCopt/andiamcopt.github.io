@@ -1,0 +1,170 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #002f4b;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header .user-menu {
+    position: relative;
+}
+
+header .user-name {
+    cursor: pointer;
+}
+
+header .user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+header .user-dropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+header .user-dropdown a:hover {
+    background-color: #f4f4f4;
+}
+
+header .user-menu:hover .user-dropdown {
+    display: block;
+}
+
+aside {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #003366;
+    color: #fff;
+    transition: width 0.3s ease;
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li {
+    text-align: center;
+    position: relative;
+}
+
+aside nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+aside nav ul li a i {
+    display: block;
+    font-size: 1.5rem;
+}
+
+aside nav ul li a span {
+    display: none;
+    position: absolute;
+    left: 60px;
+    top: 0;
+    background-color: #003366;
+    color: #fff;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+aside:hover {
+    width: 200px;
+}
+
+aside:hover nav ul li a span {
+    display: block;
+}
+
+main {
+    margin-left: 60px;
+    padding: 1rem;
+    padding-top: 80px;
+    flex: 1;
+}
+
+.dashboard {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard .tabs .tab {
+    padding: 0.5rem 1rem;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dashboard .tabs .tab:hover {
+    background-color: #005bb5;
+}
+
+.dashboard .content {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #0073e6;
+    color: #fff;
+}

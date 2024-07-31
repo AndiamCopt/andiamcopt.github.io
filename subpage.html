@@ -3,17 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subpage</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="subpagestyles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>This is the Subpage</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="subpage.html">Subpage</a></li>
-        </ul>
-    </nav>
-    <script src="scripts/script.js"></script>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="user-menu">
+            <span class="user-name">Joseph Abdelmalek</span>
+            <div class="user-dropdown">
+                <a href="#">Settings</a>
+                <a href="#">Sign Out</a>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="#"><i class="fas fa-tasks"></i><span>Tasks</span></a></li>
+                <li><a href="#"><i class="fas fa-users"></i><span>Users</span></a></li>
+                <li><a href="#"><i class="fas fa-comments"></i><span>Messages</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="dashboard">
+            <h1>My Dashboard</h1>
+            <div class="tabs">
+                <button class="tab">Active Assignments</button>
+                <button class="tab">Completed Assignments</button>
+                <button class="tab">Submitted</button>
+                <button class="tab">Drafts</button>
+                <button class="tab">Subscribed</button>
+            </div>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Completed</th>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Department</th>
+                            <th>Request Type</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data rows go here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>

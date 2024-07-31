@@ -62,3 +62,19 @@ signupForm.addEventListener('submit', (e) => {
             alert(`Error: ${errorMessage}`);
         });
 });
+
+// Subpage scripts
+document.addEventListener('DOMContentLoaded', function () {
+    const userName = document.querySelector('.user-name');
+    const userDropdown = document.querySelector('.user-dropdown');
+
+    userName.addEventListener('click', function () {
+        userDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!userName.contains(e.target) && !userDropdown.contains(e.target)) {
+            userDropdown.classList.remove('show');
+        }
+    });
+});
