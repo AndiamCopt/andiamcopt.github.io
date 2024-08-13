@@ -5,65 +5,72 @@ document.querySelectorAll('.card').forEach(card => {
     });
 });
 
-// Firebase App and Authentication are already initialized in the HTML file
+const registerUser = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('User registered:', user);
+      })
+      .catch((error) => {
+        console.error('Error registering user:', error);
+      });
+  };
+  
+const loginUser = (email, password) => 
+{
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('User logged in:', user);
+      })
+      .catch((error) => {
+        console.error('Error logging in user:', error);
+      });
+};
+  
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
-// Reference to the form elements
-const loginForm = document.getElementById('login-form');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
+const db = getFirestore(app);
 
-// Add event listener to the login form
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+const saveProgress = async (userId, progressData) => {
+    try {
+      await setDoc(doc(db, "userProgress", userId), progressData);
+      console.log('Progress saved');
+    } catch (error) {
+      console.error('Error saving progress:', error);
+    }
+  };
+  
+const getProgress = async (userId) => {
+    try {
+      const docRef = doc(db, "userProgress", userId);
+      const docSnap = await getDoc(docRef);
+  
+      if (docSnap.exists()) {
+        console.log("User progress:", docSnap.data());
+        return docSnap.data();
+      } else {
+        console.log("No such document!");
+        return null;
+      }
+    } catch (error) {
+      console.error('Error getting progress:', error);
+    }
+  };
 
-    const email = emailInput.value;
-    const password = passwordInput.value;
+const checkProgressAndRenderContent = async (userId) => {
+    const progress = await getProgress(userId);
+    if (progress && progress.completedLessons.includes('Lesson1')) {
+      // Render next lesson
+    } else {
+      // Redirect to previous lesson or show an error
+    }
+  };
+  
 
-    // Sign in with Firebase Authentication
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed in successfully
-            const user = userCredential.user;
-            alert('Login successful!');
-            // You can redirect or update the UI as needed
-        })
-        .catch((error) => {
-            // Handle errors here
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert(`Error: ${errorMessage}`);
-        });
-});
-
-// Reference to the signup form elements
-const signupForm = document.getElementById('signup-form');
-const signupEmailInput = document.getElementById('signup-email');
-const signupPasswordInput = document.getElementById('signup-password');
-
-// Add event listener to the signup form
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = signupEmailInput.value;
-    const password = signupPasswordInput.value;
-
-    // Sign up with Firebase Authentication
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed up successfully
-            const user = userCredential.user;
-            alert('Sign-up successful!');
-            // You can redirect or update the UI as needed
-        })
-        .catch((error) => {
-            // Handle errors here
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert(`Error: ${errorMessage}`);
-        });
-});
 
 // Subpage scripts
+
 document.addEventListener('DOMContentLoaded', function () {
     const userName = document.querySelector('.user-name');
     const userDropdown = document.querySelector('.user-dropdown');
